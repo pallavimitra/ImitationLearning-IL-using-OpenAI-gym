@@ -71,10 +71,10 @@ pip install -r requirements.txt
 ## Training
 
  a. Load the saved data recorded during running Data_Generate.py
-      ```
-      Load_and_Wrangle()
-      ```
-    Return input image and target outputs : Steering & Throttle
+ 
+ ```
+ Load_and_Wrangle()
+ ```  
     
  b. Set the hyper parameters 
   ```
@@ -88,6 +88,7 @@ LossWeights = [0.9, 0.004]
 ```
 
  c. Create the model
+ 
  A network structure of four one input Convolutional Neural Network is used as follows:
  ```
  build_model_Parallel(input_dim=(96, 96, 1))
@@ -98,10 +99,12 @@ LossWeights = [0.9, 0.004]
 </p>
 
 d. Fit the model on data
+
  ```
  Build_Fit_Model(X, Y1, Y2)
  ```
 e. Loss function
+
    Mean square error (MSE)
    ```
    model.compile(optimizer=optim,
